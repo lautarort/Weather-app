@@ -1,16 +1,19 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import Logo from '../logoHenry.png'
+ import Logo from '../logoHenry.png'
 import SearchBar from './SearchBar.jsx';
-import './Nav.css';
+import styles from './Nav.module.css';
 
-function Nav({onSearch}) {
+export default function Nav ({onSearch}){
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <a className="navbar-brand" href="#">LRT Climate</a>
-    <SearchBar onSearch={onSearch}/>
-    <img src={Logo} alt={"Henry"}/>
-  </nav>
-  );
-};
-
-export default Nav;
+      <nav className={styles.nav}>
+          <div className="container-fluid">
+              <div className="d-flex align-items-center">
+                  <img src={Logo} className={styles.logo} alt="logo Henry" srcset="" />
+                  <a className={styles.brand} href="http://github.com/anaharri">LRT</a>
+              </div>
+              <SearchBar className={styles.sb} onSearch={onSearch}/>
+          </div>
+      </nav>
+  )
+}

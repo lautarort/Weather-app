@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cards.css';
+import styles from './Cards.module.css';
 
 import Card from './Card.jsx';
 
@@ -18,8 +18,6 @@ export default function Cards({cities, onClose}) {
       </div>
     );
   } else {
-    return(
-      <div>Sin ciudades</div>
-    )
+    return(<h4 className={styles.noCities}>Sin ciudades</h4>)
   }
 }

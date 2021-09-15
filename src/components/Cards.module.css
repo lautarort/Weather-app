@@ -1,0 +1,11 @@
+.cards {
+  display: flex;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-around; */
+  /* justify-content: center; */
+}
+.noCities {
+  color: #1f3542;
+  font-weight: bold;
+}

@@ -1,22 +1,17 @@
-import React, { useState } from "react";
-//import st from '../styles/SearchBar.module.css';
+import React, {useState} from 'react';
+import styles from './SearchBar.module.css'
 
 export default function SearchBar({onSearch}) {
- const [ciudad, setCiudad] = useState("");
+
+  const [param, setParam] = useState("")
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      onSearch(ciudad);
-      setCiudad("");
+    <form onSubmit= {e => {
+      e.preventDefault()
+      onSearch(param)
+      setParam('')
     }}>
-      <input
-        type="text"
-        placeholder="Ciudad....."
-        value={ciudad}
-        onChange={e => setCiudad(e.target.value)}
-      />
-      <input type="submit" value="Agregar" />
-      
-    </form>
-  );
-}
+      <input className={styles.searchBar} value={param} type='text' placeholder='Ciudad...' onChange={e => setParam(e.target.value)}/>
+      <input className={styles.searchBtn} type="submit" value='Agregar'/>
+  </form>  
+  )
+};
