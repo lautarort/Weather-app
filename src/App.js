@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Nav from './components/Nav'
-import Cards from './components/Cards';
+import Cards from './components/Cards'; 
 
 export default function App() {
 
@@ -42,9 +42,12 @@ export default function App() {
 
   return (
     <div className="App">
+      <div>
       <Nav onSearch={onSearch} />
+      </div>
+      <div>
       <Cards cities={cities} onClose={onClose} />
-      
+      </div>
     </div>
   );
 }
